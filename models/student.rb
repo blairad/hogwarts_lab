@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('house')
 
 class Student
 
@@ -34,7 +35,7 @@ class Student
 
   def house()
     house = House.find(@house_id)
-    return house
+    return house.name
   end
 
   def update()
