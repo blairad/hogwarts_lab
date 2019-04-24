@@ -47,3 +47,9 @@ post "/students/:id" do
 end
 
 # destroy
+
+post '/students/:id/delete' do
+  student = Student.find ( params[:id] )
+  student.delete()
+  redirect to '/students'
+end
